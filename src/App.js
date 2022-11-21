@@ -97,11 +97,11 @@ function ChatRoom() {
         <input
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
-          placeholder="say something nice"
+          placeholder="type here..."
         />
 
         <button type="submit" disabled={!formValue}>
-          🕊️
+          🚀
         </button>
       </form>
     </>
@@ -109,7 +109,7 @@ function ChatRoom() {
 }
 
 function ChatMessage(props) {
-  const { text, uid, photoURL } = props.message;
+  const { text, uid, photoURL, createdAt } = props.message;
 
   const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
 
@@ -118,7 +118,7 @@ function ChatMessage(props) {
       <div className={`message ${messageClass}`}>
         <img
           src={
-            photoURL || "https://api.adorable.io/avatars/23/abott@adorable.png"
+            photoURL || "https://cdn-icons-png.flaticon.com/512/924/924915.png"
           }
         />
         <p>{text}</p>
