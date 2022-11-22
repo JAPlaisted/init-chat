@@ -1,4 +1,4 @@
-import React, { createRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 import firebase from "firebase/compat/app";
@@ -7,6 +7,8 @@ import "firebase/compat/auth";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
+
+import ScrollToBottom from "react-scroll-to-bottom";
 
 firebase.initializeApp({
   apiKey: "AIzaSyCIbsZJVSf-tJO2dJzr4_DGNPMApp65ZaQ",
@@ -60,7 +62,7 @@ function SignOut() {
 }
 
 function ChatRoom() {
-  const messagesEndRef = createRef();
+  const messagesEndRef = useRef(null);
 
   const messagesRef = firestore.collection("messages");
   const query = messagesRef.orderBy("createdAt").limitToLast(25);
@@ -68,6 +70,14 @@ function ChatRoom() {
   const [messages] = useCollectionData(query, { idField: "id" });
 
   const [formValue, setFormValue] = useState("");
+
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -86,7 +96,7 @@ function ChatRoom() {
   };
 
   return (
-    <>
+    <ScrollToBottom>
       <main>
         {messages &&
           messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
@@ -104,12 +114,12 @@ function ChatRoom() {
           🚀
         </button>
       </form>
-    </>
+    </ScrollToBottom>
   );
 }
 
 function ChatMessage(props) {
-  const { text, uid, photoURL, createdAt } = props.message;
+  const { text, uid, photoURL } = props.message;
 
   const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
 
