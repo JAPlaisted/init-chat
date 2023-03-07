@@ -1,29 +1,33 @@
-## Initchat. 
+## InitChat
+InitChat is a chat app with fullstack capabilities using React.js and Firebase, featuring Google authentication and a banned users list.
 
-InitChat is a fullstack chat app utilizing React.js on the front-end and Firebase on the back end. This app features google authentication on the backend as well as a banned users list.
+This product is currently under review via Chrome Webstore
 
-## Visit Live Site
+## Installation
+Clone the repository to your local machine. Install the required dependencies using npm install. Start the development server using npm start.
+
+## Usage
+View the live site here:
 
 https://superchat-7b816.web.app/
 
-## Project Screenshots
-![initchat-login](https://user-images.githubusercontent.com/55415399/205345155-a06269bd-22db-4a04-9a8d-cfe98e949f9d.PNG)
-![initchat](https://user-images.githubusercontent.com/55415399/205345167-98ed4489-a627-4880-a65e-9e5ba19436d3.PNG)
+OR
 
-## Installation
+To use InitChat, follow these steps:
 
-npm install
+Fork this project then use npm start.
+Open your web browser and navigate to http://localhost:3000. 
 
-### To Run Test Suite
+## Screen Shots:
 
-npm test
 
-### To Start Server
 
-npm start
+## Contributing
+If you'd like to contribute to InitChat, please follow these guidelines:
 
-## Reflection
+Fork the repository and create a new branch for your changes.
+Make your changes and test them thoroughly.
+Submit a pull request to the main repository and describe your changes in detail.
 
-I learned a LOT during this project. This was my largest fullstack application to date. Backed by firebase, this application can handle sending thousands of messages a day. My main take away from this project was utilizing firebase with react, giving me the capability of creating scalable applications while focusing on UX/UI. Firebase also includes authentication services that I have integrated with this application to make it work with Gmail accounts. Lastly, this application features back-end code creating a banned users list. Before a message is sent, the program checks the banned users list, if the user is not listed, the message will send. 
-
-This project is built with React and Firebase.
+## Credits
+InitChat was created by Jonathan Plaisted.
