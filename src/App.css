@@ -1,4 +1,6 @@
 :root {
+  --color-primary: #b266e6;
+  --color-secondary: #6693e7;
   --color-background: #16100e;
 }
 
@@ -59,7 +61,7 @@ main::-webkit-scrollbar-track {
 }
 
 main::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: var(--color-primary);
 }
 
 form {
@@ -74,10 +76,9 @@ form {
 }
 
 form button {
-  background: rgb(29,56,156);
-  background: linear-gradient(330deg, rgba(29,56,156,1) 0%, rgba(89,205,222,1) 100%);
+  background: var(--color-secondary);
+  background: linear-gradient(330deg, var(--color-secondary) 0%,  var(--color-primary) 100%);
 }
-
 
 input {
   line-height: 1.5;
@@ -91,7 +92,7 @@ input {
 }
 
 button {
-  background-color: #282c34; /* Green */
+  background-color: #282c34; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -111,8 +112,8 @@ button:disabled {
 
 .sign-in {
   color: white;
-  background: rgb(29,56,156);
-  background: linear-gradient(330deg, rgba(29,56,156,1) 0%, rgba(89,205,222,1) 100%);
+  background: var(--color-secondary);
+  background: linear-gradient(330deg, var(--color-secondary) 0%,  var(--color-primary) 100%);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -144,11 +145,11 @@ p {
 
 .sent p {
   color: white;
-  background: #6693e7;
+  background: var(--color-secondary);
   align-self: flex-end;
 }
 .received p {
-  background: #b266e6;
+  background: var(--color-primary);
   color: white;
 }
 
