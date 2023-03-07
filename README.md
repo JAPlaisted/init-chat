@@ -19,6 +19,8 @@ Open your web browser and navigate to http://localhost:3000.
 
 ## Screen Shots:
 
+![chat1](https://user-images.githubusercontent.com/55415399/223566246-ee2b88cb-022a-4ed6-b793-b4029c81d124.JPG)
+![chat2](https://user-images.githubusercontent.com/55415399/223566256-60dd1082-f272-4637-9bf2-467884aa8b31.JPG)
 
 
 ## Contributing
