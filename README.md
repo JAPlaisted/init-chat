@@ -15,7 +15,6 @@ OR
 
 To use InitChat, follow these steps:
 
-Fork this project then use npm start.
 Open your web browser and navigate to http://localhost:3000. 
 
 ## Screen Shots:
