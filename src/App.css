@@ -1,5 +1,5 @@
 :root {
-  --color-background: #040507;
+  --color-background: #16100e;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background: url(https://i.imgur.com/ygmzyQ5.jpeg);
+  background: url(https://cdn.midjourney.com/f08afba6-6579-4f5a-a96f-05945ead4d94/grid_0.png);
   background-position: center;
   background-size: 30rem;
   background-repeat: no-repeat;
@@ -144,11 +144,11 @@ p {
 
 .sent p {
   color: white;
-  background: #0328e3;
+  background: #6693e7;
   align-self: flex-end;
 }
 .received p {
-  background: #9920ea;
+  background: #b266e6;
   color: white;
 }
 
